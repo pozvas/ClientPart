@@ -23,11 +23,6 @@ public:
 	std::string GetLastname() const { return _lastname; }
 	std::string GetPatronymic() const { return _patronymic; }
 	State GetState() const { return _state; }
-	std::string Convert();
-	static Patient Reconvert(std::string str);
-	bool IsNormal() {
-		return true;
-	}
 	virtual ~Patient() {}
 };
 
@@ -41,10 +36,7 @@ public:
 		State state,
 		size_t moneyAmount = 100) : Patient(firstname, lastname, patronymic, state), _moneyAmount(moneyAmount) {
 	}
-	size_t GetMoney() { return _moneyAmount; }
-	bool IsNormal() {
-		return false;
-	}
+	size_t GetMoney() const { return _moneyAmount; }
 };
 
 

@@ -1,7 +1,7 @@
 #include "DoctorApplication.h"
 
 int main() {
-    DoctorApplication doctor = DoctorApplication();
+    DoctorApplication doctor;
     doctor.GetPatient();
     return 0;
 }
