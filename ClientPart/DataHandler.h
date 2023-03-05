@@ -20,12 +20,10 @@ public:
 
 	static Patient Unpacking(const std::string& str) {
 		json j = json::parse(str);
-		Patient* patient;
 		if (j.contains("money"))
-			patient = new VIP_Patient(j.at("firstname"), j.at("lastname"), j.at("patronymic"), j.at("state"), j.at("money"));
+			return VIP_Patient(j.at("firstname"), j.at("lastname"), j.at("patronymic"), j.at("state"), j.at("money"));
 		else
-			patient = new Patient(j.at("firstname"), j.at("lastname"), j.at("patronymic"), j.at("state"));
-		return *patient;
+			return Patient(j.at("firstname"), j.at("lastname"), j.at("patronymic"), j.at("state"));
 	}
 };
 
