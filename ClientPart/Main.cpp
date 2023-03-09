@@ -2,6 +2,5 @@
 
 int main() {
     DoctorApplication doctor;
-    doctor.GetPatient();
     return 0;
 }

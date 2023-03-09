@@ -1,6 +1,6 @@
 #pragma once
 #include "ConnectionController.h"
-#include "Patient.h"
+
 class DoctorApplication
 {
 private:
@@ -11,9 +11,6 @@ private:
 public:
 	DoctorApplication() {
 		Login();
-	}
-	void GetPatient() {
-		std::cout << "dadas";
 	}
 };
 
