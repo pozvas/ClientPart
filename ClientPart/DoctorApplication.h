@@ -5,12 +5,13 @@ class DoctorApplication
 {
 private:
 	ConnectionController _conConrol;
-	void Login() {
-		_conConrol.Connect();
-	}
+    bool _logged;
+
+    void Working();
+    void GetPatientRequestHandeler();
+    void LogoutRequestHandler();
+    void LoginRequestHandler();
 public:
-	DoctorApplication() {
-		Login();
-	}
+    DoctorApplication();
 };
 
